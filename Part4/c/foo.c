@@ -3,14 +3,20 @@
 
 int i = 0;
 
-// Note the return type: void*
+// Note the return type: void* (pointer)
 void* incrementingThreadFunction(){
-    // TODO: increment i 1_000_000 times
+    int j;
+    for(j=0; j<1000000;j++){
+        i++;
+    }
     return NULL;
 }
 
 void* decrementingThreadFunction(){
-    // TODO: decrement i 1_000_000 times
+     int j;
+    for(j=0; j<1000000;j++){
+        i--;
+    }
     return NULL;
 }
 
