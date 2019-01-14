@@ -22,12 +22,12 @@ def decrementingFunction():
 
 
 def main():
-    # TODO: Something is missing here (needed to print i)
 
     incrementing = Thread(target = incrementingFunction, args = (),)
     decrementing = Thread(target = decrementingFunction, args = (),)
     
-    # TODO: Start both threads
+    incrementing.start()
+    decrementing.start()
     
     incrementing.join()
     decrementing.join()
